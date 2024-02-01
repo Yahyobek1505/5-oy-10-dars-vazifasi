@@ -30,12 +30,12 @@ function validation(name, price) {
 
 function creatRow(phone, index) {
   return `
-  <tr>
+  <tr data-id = 'data_${phone.id}'>
         <td>${index}</td>
-        <td class="text-info" style="cursor: pointer; ">${phone.name}</td>
+        <td  class="text-info" style="cursor: pointer;">${phone.name}</td>
         <td>${phone.price}$</td>
         <td>${phone.description}</td>
-        <td><i class="fa-regular fa-pen-to-square text-primary  " style="cursor: pointer;"></i>
+        <td data-id = 'data_${phone.id}'><i class="fa-regular fa-pen-to-square text-primary" style="cursor: pointer;"></i>
         <i class="fa-solid fa-trash text-danger" style="cursor: pointer; margin-left: 15px;"></i>
       </td>
       </tr>
